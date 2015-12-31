@@ -25,7 +25,7 @@ private static int responseCode = -1;
  }
 
  private static void setProxy(String host, int port) {
-  URLConnector.setProxy(host, port);
+  way2sms.setProxy(host, port);
  }
 
  private static void getSite() {

@@ -12,7 +12,7 @@ public class urlcheck {
 	{
 		try{         
 		    URL myurl = new URL();        
-		    connection = (HttpURLConnection) ((urlstring) myurl).openConnection(); 
+		    connection = (HttpURLConnection) myurl.openConnection(); 
 		         
 		    connection.setRequestMethod("HEAD");         
 		    int code = connection.getResponseCode();        

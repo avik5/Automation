@@ -9,8 +9,8 @@ import java.net.MalformedURLException;
 //import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
-import com.gargoylesoftware.htmlunit.SgmlPage;
+//import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+//import com.gargoylesoftware.htmlunit.SgmlPage;
 //import static org.testng.AssertJUnit.assertEquals;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
@@ -21,6 +21,7 @@ public class code {
 
 	private static WebClient webClient;
 	//private static Scanner in;
+	private static Scanner in;
 
 	public static void main(String[] args) throws MalformedURLException, IOException
 	
@@ -37,7 +38,7 @@ public class code {
 		
 		String url;
 		 
-	       Scanner in = new Scanner(System.in);
+	       in = new Scanner(System.in);
 	 
 	      System.out.println("Enter a url");
 	      url = in.nextLine();
