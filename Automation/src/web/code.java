@@ -47,7 +47,7 @@ public class code {
 		 HtmlPage htmlPage = webClient.getPage(url);
 		//int expectedText =200;
 		
-		int actualText =  htmlPage.getWebResponse().getStatusCode();
+		int actualText =  ((htmlpage) htmlPage.getWebResponse()).getStatusCode();
 				
 		try
 		{
