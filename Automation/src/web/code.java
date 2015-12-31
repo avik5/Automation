@@ -39,7 +39,7 @@ public class code {
 		 
 	       Scanner in = new Scanner(System.in);
 	 
-	      System.out.println("Enter a string");
+	      System.out.println("Enter a url");
 	      url = in.nextLine();
 		//String url = "http://www.google.com";
 		
@@ -47,7 +47,7 @@ public class code {
 		 HtmlPage htmlPage = webClient.getPage(url);
 		//int expectedText =200;
 		
-		int actualText =  ((htmlpage) htmlPage.getWebResponse()).getStatusCode();
+		int actualText = htmlPage.getWebResponse().getStatusCode();
 				
 		try
 		{
