@@ -11,13 +11,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.monte.media.math.Rational;
 import org.monte.media.Format;
-import org.monte.media.Format;
+//import org.monte.media.Format;
 import org.monte.screenrecorder.ScreenRecorder;
 
 import static org.monte.media.AudioFormatKeys.*;
 import static org.monte.media.VideoFormatKeys.*;
 import java.awt.*;
-import java.io.File;
+//import java.io.File;
 import java.io.IOException;
 
 import org.openqa.selenium.support.ui.Select;
