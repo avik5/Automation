@@ -9,21 +9,45 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.monte.media.math.Rational;
+import org.monte.media.Format;
+import org.monte.media.Format;
+import org.monte.screenrecorder.ScreenRecorder;
+
+import static org.monte.media.AudioFormatKeys.*;
+import static org.monte.media.VideoFormatKeys.*;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 
 import org.openqa.selenium.support.ui.Select;
 
-public class Booking {
+public class BookVedio {
 	
 	public static String baseurl="http://4102-01-41.zimmber.com/admin/";
 	public static WebDriver driver = new FirefoxDriver(); 
+	 private static ScreenRecorder screenRecorder;
+	 private static GraphicsConfiguration gconfig;
 	
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException, AWTException {
 		// TODO Auto-generated method stub
 		
 		//WebDriver driver = new ChromeDriver();
 		
 		//FirefoxDriver driver =new FirefoxDriver();
 		
+		 screenRecorder = new ScreenRecorder(gconfig,
+		         new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey,
+		         MIME_AVI),
+		         new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey,
+		         ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+		         CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE,
+		         DepthKey, (int)24, FrameRateKey, Rational.valueOf(15),
+		         QualityKey, 1.0f,
+		         KeyFrameIntervalKey, (int) (15 * 60)),
+		         new Format(MediaTypeKey, MediaType.VIDEO,
+		         EncodingKey,"black",
+		         FrameRateKey, Rational.valueOf(30)), null);
 		driver.get(baseurl);
 		driver.manage().window().maximize();
 		
@@ -187,7 +211,7 @@ public class Booking {
 	   
 	}
 	
-	public static void testreport()
+	public static void testreport() throws IOException
 	{
 		
 		String expectedText ="0000-00-00";
@@ -200,11 +224,13 @@ public class Booking {
 			System.out.println("Test Passed");
 		}
 		
-		catch(Throwable e)
+		catch(Exception e)
 		{
 			
 			System.out.println("Test Failed... because service date loopfall");
+			screenRecorder.stop();
 		}
+		
 		
 	}
 	
