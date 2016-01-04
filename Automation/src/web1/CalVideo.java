@@ -20,7 +20,7 @@ import static org.monte.media.AudioFormatKeys.*;
 import static org.monte.media.VideoFormatKeys.*;
 
 
-public class CalVedio
+public class CalVideo  
 {
    private static ScreenRecorder screenRecorder;
    public static void main(String[] args) throws IOException, AWTException

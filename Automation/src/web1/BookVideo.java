@@ -22,7 +22,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.support.ui.Select;
 
-public class BookVedio {
+public class BookVideo {
 	
 	public static String baseurl="http://4102-01-41.zimmber.com/admin/";
 	public static WebDriver driver = new FirefoxDriver(); 
